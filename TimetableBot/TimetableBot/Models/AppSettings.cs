@@ -7,7 +7,7 @@ namespace TimetableBot.Models
 {
     public class AppSettings
     {
-        public static string Url { get; set; } = "https://t.me/TimetableBot_bot";
+        public static string Url { get; set; } = "http://localhost:1815/{0}";
 
         public static string Name { get; set; } = "TimetableBot_bot";
 
