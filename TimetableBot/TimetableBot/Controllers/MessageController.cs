@@ -7,6 +7,7 @@ using System.Web.Http;
 using System.Web.Http.Results;
 using Telegram.Bot.Types;
 using System.Threading.Tasks;
+using TimetableBot.Models;
 
 namespace TimetableBot.Controllers
 {

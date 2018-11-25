@@ -4,9 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Threading.Tasks;
 using Telegram.Bot;
-using TimetableBot.Commands;
+using TimetableBot.Models.Commands;
 
-namespace TimetableBot
+namespace TimetableBot.Models
 {
     public static class Bot
     {
@@ -24,7 +24,7 @@ namespace TimetableBot
 
             commandsList = new List<Command>();
             commandsList.Add(new HelloCommand());
-
+            //инициализация команд тут
             client = new TelegramBotClient(AppSettings.Key);
             var hook = string.Format(AppSettings.Url, "api/message/update");
             await client.SetWebhookAsync(hook);
