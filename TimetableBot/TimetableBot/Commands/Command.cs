@@ -1,7 +1,7 @@
 ﻿using Telegram.Bot.Types;
 using Telegram.Bot;
 
-namespace TimetableBot.Models.Commands
+namespace TimetableBot.Commands
 {
     public abstract class Command
     {
@@ -11,7 +11,7 @@ namespace TimetableBot.Models.Commands
 
         public bool Contains(string command)
         {
-            return command.Contains(this.Name) && command.Contains(AppSettings.Name);
+            return command.Contains(this.Name);
         }
     }
 }

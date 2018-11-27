@@ -5,7 +5,7 @@ using System.Web;
 using Telegram.Bot;
 using Telegram.Bot.Types;
 
-namespace TimetableBot.Models.Commands
+namespace TimetableBot.Commands
 {
     public class HelloCommand : Command
     {
