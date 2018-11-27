@@ -3,6 +3,9 @@ using Telegram.Bot;
 using System.Net;
 using Telegram.Bot.Args;
 using System.Threading;
+using System.Collections.Generic;
+using TimetableBot.Commands;
+using Telegram.Bot.Types;
 
 namespace TimetableBot
 {
@@ -22,16 +25,36 @@ namespace TimetableBot
             Thread.Sleep(int.MaxValue);
         }
 
-        static async void Bot_OnMessage(object sender, MessageEventArgs e)
+        private static List<Command> commandsList;
+
+        public static IReadOnlyList<Command> Commands { get => commandsList.AsReadOnly(); }
+
+        static void Bot_OnMessage(object sender, MessageEventArgs e)
         {
             if (e.Message.Text != null)
             {
                 Console.WriteLine($"Received a text message in chat {e.Message.Chat.Id}.");
+            }
 
-                await botClient.SendTextMessageAsync(
-                  chatId: e.Message.Chat,
-                  text: "You said:\n" + e.Message.Text
-                );
+            commandsList = new List<Command>
+            {
+                new HelloCommand()
+            };
+
+            var update = new Update();
+
+            var message = update.Message;
+
+            if (message != null)
+            {
+                foreach (var command in Commands)
+                {
+                    if (command.Contains(message.Text))
+                    {
+                        command.Execute(message, botClient);
+                        break;
+                    }
+                }
             }
         }
     }

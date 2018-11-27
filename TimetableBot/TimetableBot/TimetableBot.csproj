@@ -49,6 +49,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\Command.cs" />
+    <Compile Include="Commands\HelloCommand.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

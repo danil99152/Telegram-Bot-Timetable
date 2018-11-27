@@ -11,7 +11,7 @@ namespace TimetableBot.Commands
     {
         public override string Name => "hello";
 
-        public override async void Execute(Message message, TelegramBotClient client)
+        public override async void Execute(Message message, ITelegramBotClient client)
         {
             string[] replayes = { "Hello!", "СапБой", "Я в УдГУ всё могу!"};
             var chatId = message.Chat.Id;
