@@ -13,7 +13,7 @@ namespace TimetableBot.Commands
 
         public override async void Execute(Message message, ITelegramBotClient client)
         {
-            string[] replayes = { "Hello!", "СапБой", "Я в УдГУ всё могу!"};
+            string[] replayes = { "Hello!", "Здравие желаю", "Пока"};
             var chatId = message.Chat.Id;
             var messageId = message.MessageId;
 

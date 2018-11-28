@@ -31,22 +31,17 @@ namespace TimetableBot
 
         static void Bot_OnMessage(object sender, MessageEventArgs e)
         {
-            if (e.Message.Text != null)
-            {
-                Console.WriteLine($"Received a text message in chat {e.Message.Chat.Id}.");
-            }
-
             commandsList = new List<Command>
             {
                 new HelloCommand()
             };
 
-            var update = new Update();
+            var message = e.Message;
 
-            var message = update.Message;
-
-            if (message != null)
+            if (message.Text != null)
             {
+                Console.WriteLine($"Received a text message in chat {message.Chat.Id}.");
+
                 foreach (var command in Commands)
                 {
                     if (command.Contains(message.Text))
@@ -59,4 +54,3 @@ namespace TimetableBot
         }
     }
 }
-
