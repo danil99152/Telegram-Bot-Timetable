@@ -10,3 +10,15 @@ C:\Users\Danil\Desktop\Telegram-Bot-Timetable\TimetableBot\TimetableBot\obj\Debu
 C:\Users\Danil\Desktop\Telegram-Bot-Timetable\TimetableBot\TimetableBot\obj\Debug\TimetableBot.csproj.CopyComplete
 C:\Users\Danil\Desktop\Telegram-Bot-Timetable\TimetableBot\TimetableBot\obj\Debug\TimetableBot.exe
 C:\Users\Danil\Desktop\Telegram-Bot-Timetable\TimetableBot\TimetableBot\obj\Debug\TimetableBot.pdb
+C:\TelegramBot\Telegram-Bot-Timetable\TimetableBot\TimetableBot\bin\Debug\TimetableBot.exe.config
+C:\TelegramBot\Telegram-Bot-Timetable\TimetableBot\TimetableBot\bin\Debug\TimetableBot.exe
+C:\TelegramBot\Telegram-Bot-Timetable\TimetableBot\TimetableBot\bin\Debug\TimetableBot.pdb
+C:\TelegramBot\Telegram-Bot-Timetable\TimetableBot\TimetableBot\bin\Debug\Newtonsoft.Json.dll
+C:\TelegramBot\Telegram-Bot-Timetable\TimetableBot\TimetableBot\bin\Debug\Telegram.Bot.dll
+C:\TelegramBot\Telegram-Bot-Timetable\TimetableBot\TimetableBot\bin\Debug\Newtonsoft.Json.xml
+C:\TelegramBot\Telegram-Bot-Timetable\TimetableBot\TimetableBot\bin\Debug\Telegram.Bot.xml
+C:\TelegramBot\Telegram-Bot-Timetable\TimetableBot\TimetableBot\obj\Debug\TimetableBot.csprojAssemblyReference.cache
+C:\TelegramBot\Telegram-Bot-Timetable\TimetableBot\TimetableBot\obj\Debug\TimetableBot.csproj.CoreCompileInputs.cache
+C:\TelegramBot\Telegram-Bot-Timetable\TimetableBot\TimetableBot\obj\Debug\TimetableBot.csproj.CopyComplete
+C:\TelegramBot\Telegram-Bot-Timetable\TimetableBot\TimetableBot\obj\Debug\TimetableBot.exe
+C:\TelegramBot\Telegram-Bot-Timetable\TimetableBot\TimetableBot\obj\Debug\TimetableBot.pdb

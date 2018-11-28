@@ -18,7 +18,7 @@ namespace TimetableBot
             botClient = new TelegramBotClient("715240208:AAHS-H8AUdR2Wr4eOm4wdJKPWNle7CI4V1E", httpProxy);
             var me = botClient.GetMeAsync().Result;
             Console.WriteLine(
-              $"Hello, World! I am user {me.Id} and my name is {me.FirstName}.");
+              $" Bot start.\n IdBot-> {me.Id} \n NameBot -> {me.FirstName}");
 
             botClient.OnMessage += Bot_OnMessage;
             botClient.StartReceiving();
@@ -37,11 +37,17 @@ namespace TimetableBot
                 new WhatsupCommand()
             };
 
+            
             var message = e.Message;
+            DateTime localTime = e.Message.Date.ToLocalTime();// подключение времени от компа 
 
             if (message.Text != null)
             {
-                Console.WriteLine($"Received a text message in chat {message.Chat.Id}.");
+                Console.WriteLine($"New message in chat " +
+                    $"\nText->{message.Text} " +
+                    $"\nIdChat->{message.Chat.Id} " +
+                    $"\nTime->{localTime}" +
+                    $"\n$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
 
                 foreach (var command in Commands)
                 {

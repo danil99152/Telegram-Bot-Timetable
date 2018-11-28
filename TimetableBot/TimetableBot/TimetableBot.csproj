@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="Commands\Command.cs" />
     <Compile Include="Commands\HelloCommand.cs" />
+    <Compile Include="Commands\MyId.cs" />
     <Compile Include="Commands\WhatsupCommand.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

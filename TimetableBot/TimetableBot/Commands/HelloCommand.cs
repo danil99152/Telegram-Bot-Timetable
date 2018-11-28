@@ -9,7 +9,7 @@ namespace TimetableBot.Commands
 {
     public class HelloCommand : Command
     {
-        public override string Name => "Привет";
+        public override string Name => "/hello";
 
         public override async void Execute(Message message, ITelegramBotClient client)
         {
