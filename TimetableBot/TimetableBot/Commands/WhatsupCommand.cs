@@ -7,19 +7,16 @@ using Telegram.Bot.Types;
 
 namespace TimetableBot.Commands
 {
-    public class HelloCommand : Command
+    public class WhatsupCommand : Command
     {
-        public override string Name => "Привет";
+        public override string Name => "Как дела?";
 
         public override async void Execute(Message message, ITelegramBotClient client)
         {
-            string[] replayes = { "Hello!", "Здравие желаю", "Пока"};
+            string replayes = "Я спал 3ч сегодня, просто убейте";
             var chatId = message.Chat.Id;
             var messageId = message.MessageId;
-
-            //логика бота
-
-            await client.SendTextMessageAsync(chatId, replayes[new Random().Next(0, replayes.Length)]);
+            await client.SendTextMessageAsync(chatId, replayes);
         }
     }
 }

@@ -33,7 +33,8 @@ namespace TimetableBot
         {
             commandsList = new List<Command>
             {
-                new HelloCommand()
+                new HelloCommand(),
+                new WhatsupCommand()
             };
 
             var message = e.Message;
