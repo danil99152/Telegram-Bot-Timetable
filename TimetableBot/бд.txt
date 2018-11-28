@@ -1,0 +1,87 @@
+CREATE TABLE [Расписание] (
+  [id] tinyint IDENTITY (1, 1) ,
+  [День недели] tinyint(7) IDENTITY (1, 1) ,
+  [Пара] tinyint(7) IDENTITY (1, 1) ,
+  [Предмет] varchar(10) ,
+  [Группа] varchar(10) ,
+  [Аудитория] varchar(50) ,
+  [Препод] varchar(50) ,
+  [Вид занятий] varchar(3) , 
+ PRIMARY KEY ([id])
+) ON [PRIMARY]
+GO
+
+CREATE TABLE [Группы] (
+  [id] tinyint IDENTITY (1, 1) ,
+  [Группа] varchar(50) , 
+ PRIMARY KEY ([id])
+) ON [PRIMARY]
+GO
+
+CREATE TABLE [Дни недели] (
+  [id] tinyint IDENTITY (1, 1) ,
+  [День недели] varchar(6) , 
+ PRIMARY KEY ([id])
+) ON [PRIMARY]
+GO
+
+CREATE TABLE [Предметы] (
+  [id] tinyint IDENTITY (1, 1) ,
+  [Предмет] varchar(50) , 
+ PRIMARY KEY ([id])
+) ON [PRIMARY]
+GO
+
+CREATE TABLE [Пары] (
+  [id] tinyint IDENTITY (1, 1) ,
+  [Номер пары] tinyint(7  ) IDENTITY (1, 1) ,
+  [Время начала] timestamp(7) ,
+  [Время окончания] timestamp(7) , 
+ PRIMARY KEY ([id])
+) ON [PRIMARY]
+GO
+
+CREATE TABLE [Виды] (
+  [id] tinyint IDENTITY (1, 1) ,
+  [Вид] varchar(3) , 
+ PRIMARY KEY ([id])
+) ON [PRIMARY]
+GO
+
+CREATE TABLE [Преподы] (
+  [id] tinyint IDENTITY (1, 1) ,
+  [Препод] varchar(50) , 
+ PRIMARY KEY ([id])
+) ON [PRIMARY]
+GO
+
+CREATE TABLE [Аудитории] (
+  [id] tinyint IDENTITY (1, 1) ,
+  [Аудитории] varchar(50) , 
+ PRIMARY KEY ([id])
+) ON [PRIMARY]
+GO
+
+CREATE TABLE [Студенты] (
+  [id] tinyint IDENTITY (1, 1) ,
+  [Номер телефона] bigint(100) ,
+  [Группа] varchar(50) , 
+ PRIMARY KEY ([id])
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [Расписание] ADD FOREIGN KEY (День недели) REFERENCES [Дни недели] ([id]);
+				
+ALTER TABLE [Расписание] ADD FOREIGN KEY (Пара) REFERENCES [Пары] ([id]);
+				
+ALTER TABLE [Расписание] ADD FOREIGN KEY (Предмет) REFERENCES [Предметы] ([id]);
+				
+ALTER TABLE [Расписание] ADD FOREIGN KEY (Группа) REFERENCES [Группы] ([id]);
+				
+ALTER TABLE [Расписание] ADD FOREIGN KEY (Аудитория) REFERENCES [Аудитории] ([id]);
+				
+ALTER TABLE [Расписание] ADD FOREIGN KEY (Препод) REFERENCES [Преподы] ([id]);
+				
+ALTER TABLE [Расписание] ADD FOREIGN KEY (Вид занятий) REFERENCES [Виды] ([id]);
+				
+ALTER TABLE [Студенты] ADD FOREIGN KEY (Группа) REFERENCES [Группы] ([id]);
