@@ -50,7 +50,7 @@ namespace TimetableBot.Models
             return res;
         }
         /// <summary>
-        /// Получить все ингридиенты
+        /// Получить все команды
         /// </summary>
         /// <returns></returns>
         public List<Command> FindAllCommands()
