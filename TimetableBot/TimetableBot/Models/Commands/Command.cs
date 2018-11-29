@@ -1,7 +1,7 @@
 ﻿using Telegram.Bot.Types;
 using Telegram.Bot;
 
-namespace TimetableBot.Commands
+namespace TimetableBot.Models.Commands
 {
     public abstract class Command
     {

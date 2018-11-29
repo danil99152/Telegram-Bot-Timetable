@@ -1,11 +1,9 @@
 ﻿using System;
-using Telegram.Bot;
 using System.Net;
-using Telegram.Bot.Args;
 using System.Threading;
-using System.Collections.Generic;
-using TimetableBot.Commands;
-using Telegram.Bot.Types;
+using Telegram.Bot;
+using Telegram.Bot.Args;
+using TimetableBot.Models;
 
 namespace TimetableBot
 {
@@ -25,19 +23,12 @@ namespace TimetableBot
             Thread.Sleep(int.MaxValue);
         }
 
-        private static List<Command> commandsList;
-
-        public static IReadOnlyList<Command> Commands { get => commandsList.AsReadOnly(); }
-
         static void Bot_OnMessage(object sender, MessageEventArgs e)
         {
-            commandsList = new List<Command>
-            {
-                new HelloCommand(),
-                new WhatsupCommand()
-            };
+            var repository = new MainRepository();
+            repository.Init();
 
-            
+
             var message = e.Message;
             DateTime localTime = e.Message.Date.ToLocalTime();// подключение времени от компа 
 
@@ -49,7 +40,7 @@ namespace TimetableBot
                     $"\nTime->{localTime}" +
                     $"\n$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
 
-                foreach (var command in Commands)
+                foreach (var command in repository.FindAllCommands())
                 {
                     if (command.Contains(message.Text))
                     {

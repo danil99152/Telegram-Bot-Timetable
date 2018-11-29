@@ -1,19 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using Telegram.Bot;
+﻿using Telegram.Bot;
 using Telegram.Bot.Types;
+using TimetableBot.Models;
+using TimetableBot.Models.Commands;
 
-namespace TimetableBot.Commands
+namespace CommandLibrary
 {
-    public class WhatsupCommand : Command
+    [Command]
+    public class HelpCommand : Command
     {
         public override string Name => "/help";
 
         public override async void Execute(Message message, ITelegramBotClient client)
         {
-            string replayes = "Привет я бот который показывает расписание вот что я умею: " +
+            string replayes = "Привет! Я бот, который показывает расписание, и вот что я умею: " +
                 "\n/Me" +
                 "\n/MyId " +
                 "\n/ScheduleToday" +

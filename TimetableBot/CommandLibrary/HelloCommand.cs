@@ -1,12 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using Telegram.Bot;
 using Telegram.Bot.Types;
+using TimetableBot.Models;
+using TimetableBot.Models.Commands;
 
-namespace TimetableBot.Commands
+namespace CommandLibrary
 {
+    [Command]
     public class HelloCommand : Command
     {
         public override string Name => "/hello";
