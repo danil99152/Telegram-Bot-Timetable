@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace TimetableBot
 {
-    public class User
+    public class Student
     {
-        public Guid Id { get; set; }
-        public string FIO { get; set; }
+        public Guid   Id    { get; set; }
+        public string FIO   { get; set; }
         public string Phone { get; set; }
+        public string Group { get; set; }
     }
 }

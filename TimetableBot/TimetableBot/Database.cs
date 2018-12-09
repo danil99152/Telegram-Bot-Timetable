@@ -50,13 +50,13 @@ values ('{Guid.NewGuid()}', 'petrov', 'Петров Петр Петрович')"
                         }
                     }*/
                     //Чтение данных из БД
-                    var userList = new List<User>();
+                    var userList = new List<Student>();
                     command.CommandText = "select [Id], [UserName], [FIO] from [User]";
                     using (var reader = command.ExecuteReader())
                     {
                         while (reader.Read())
                         {
-                            userList.Add(new User
+                            userList.Add(new Student
                             {
                                 Id = reader.GetGuid(0),
                                 FIO = reader.GetString(2),

@@ -14,7 +14,7 @@ namespace CommandLibrary
         {
             string replayes = "Привет! Я бот, который показывает расписание, и вот что я умею: " +
                 "\n/Me" +
-                "\n/MyId " +
+                "\n/MyId " + //Что за MyId, Влад? 
                 "\n/ScheduleToday" +
                 "\n/ScheduleInWeek";
             var chatId = message.Chat.Id;

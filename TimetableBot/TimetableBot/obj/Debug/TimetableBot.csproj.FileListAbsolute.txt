@@ -22,3 +22,4 @@ C:\TelegramBot\Telegram-Bot-Timetable\TimetableBot\TimetableBot\obj\Debug\Timeta
 C:\TelegramBot\Telegram-Bot-Timetable\TimetableBot\TimetableBot\obj\Debug\TimetableBot.csproj.CopyComplete
 C:\TelegramBot\Telegram-Bot-Timetable\TimetableBot\TimetableBot\obj\Debug\TimetableBot.exe
 C:\TelegramBot\Telegram-Bot-Timetable\TimetableBot\TimetableBot\obj\Debug\TimetableBot.pdb
+C:\Users\Danil\Desktop\Telegram-Bot-Timetable\TimetableBot\TimetableBot\bin\Debug\Newtonsoft.Json.pdb
