@@ -13,7 +13,7 @@ namespace CommandLibrary
 
         public override async void Execute(Message message, ITelegramBotClient client)
         {
-            string[] replayes = { "Hello!", "Здравие желаю", "Пока"};
+            string[] replayes = { "Hello!", "Здравие желаю"};
             var chatId = message.Chat.Id;
             var messageId = message.MessageId;
 
