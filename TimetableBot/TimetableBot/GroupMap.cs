@@ -16,6 +16,9 @@ namespace TimetableBot
             HasManyToMany(g => g.Students)
                 .ParentKeyColumn("Group_id")
                 .ChildKeyColumn("Student_id");
+            HasManyToMany(g => g.Lessons)
+                .ParentKeyColumn("Group_id")
+                .ChildKeyColumn("Lesson_id");
         }
     }
 }

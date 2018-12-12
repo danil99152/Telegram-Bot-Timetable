@@ -12,7 +12,7 @@ namespace TimetableBot
         public StudentMap()
         {
             Id(s => s.Id).GeneratedBy.Identity();
-            Map(s => s.FIO).Length(30);
+            Map(s => s.UserName).Length(30);
             Map(s => s.Phone).Length(11);
             HasManyToMany(s => s.Groups)
                 .ParentKeyColumn("Student_id")

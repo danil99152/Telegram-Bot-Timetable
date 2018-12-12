@@ -8,8 +8,9 @@ namespace TimetableBot
 {
     public class Group
     {
-        public long Id { get; set; }
-        public string GroupName { get; set; }
+        public virtual long Id { get; set; }
+        public virtual string GroupName { get; set; }
         public virtual ICollection<Student> Students { get; set; }
+        public virtual ICollection<Lesson> Lessons { get; set; }
     }
 }

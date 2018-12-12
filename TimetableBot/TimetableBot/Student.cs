@@ -8,11 +8,11 @@ using Microsoft.AspNet.Identity;
 
 namespace TimetableBot
 {
-    public class Student
+    public class Student: IUser<long>
     {
-        public Guid   Id       { get; set; }
-        public string FIO      { get; set; }
-        public string Phone    { get; set; }
-        public ICollection<Group> Groups { get; set; }
+        public virtual long Id       { get; set; }
+        public virtual string UserName { get; set; }
+        public virtual string Phone    { get; set; }
+        public virtual ICollection<Group> Groups { get; set; }
     }
 }

@@ -27,6 +27,9 @@ namespace TimetableBot
             HasManyToMany(l => l.Weekdays)
                  .ParentKeyColumn("Lesson_id")
                  .ChildKeyColumn("Weekday_id");
+            HasManyToMany(l => l.Groups)
+                .ParentKeyColumn("Lesson_id")
+                .ChildKeyColumn("Group_id");
         }
     }
 }

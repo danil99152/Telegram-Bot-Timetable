@@ -8,8 +8,8 @@ namespace TimetableBot
 {
     public class Weekday
     {
-        public long Id { get; set; }
-        public DayOfWeek Day { get; set; }
-        public ICollection<Lesson> Lessons { get; set; }
+        public virtual long Id { get; set; }
+        public virtual DayOfWeek Day { get; set; }
+        public virtual ICollection<Lesson> Lessons { get; set; }
     }
 }

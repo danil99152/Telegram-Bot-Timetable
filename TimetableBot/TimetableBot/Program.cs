@@ -1,4 +1,10 @@
-﻿using System;
+﻿using FluentNHibernate.Cfg;
+using FluentNHibernate.Cfg.Db;
+using NHibernate.Dialect;
+using NHibernate.Event;
+using NHibernate.Tool.hbm2ddl;
+using System;
+using System.Configuration;
 using System.Net;
 using System.Threading;
 using Telegram.Bot;
@@ -17,7 +23,22 @@ namespace TimetableBot
             var me = botClient.GetMeAsync().Result;
             Console.WriteLine(
               $" Bot start.\n IdBot-> {me.Id} \n NameBot -> {me.FirstName}");
-
+            //обновление базы данных через mapping
+            var connectionString = ConfigurationManager.ConnectionStrings["Timetable"];
+            var cfg = Fluently.Configure()
+                    .Database(MsSqlConfiguration.MsSql2012
+                        .ConnectionString(connectionString.ConnectionString)
+                        .Dialect<MsSql2012Dialect>())
+                    .Mappings(m => m.FluentMappings.AddFromAssemblyOf<Student>())
+                    .ExposeConfiguration(c => {
+                        SchemaMetadataUpdater.QuoteTableAndColumns(c);
+                    })
+                    .CurrentSessionContext("call");
+            var conf = cfg.BuildConfiguration();
+            var schemaExport = new SchemaUpdate(conf);
+            schemaExport.Execute(true, true);
+            cfg.BuildSessionFactory();
+            ///////////////////////////////////////
             botClient.OnMessage += Bot_OnMessage;
             botClient.StartReceiving();
             Thread.Sleep(int.MaxValue);
