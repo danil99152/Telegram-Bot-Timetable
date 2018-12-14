@@ -21,7 +21,7 @@ namespace CommandLibrary
         public override async void Execute(Message message, ITelegramBotClient client)
         {
             string replayes = "";
-            var connectionString = ConfigurationManager.ConnectionStrings["DbConnectionName"];
+            var connectionString = ConfigurationManager.ConnectionStrings["Timetable"];
             if (connectionString == null)
             {
                 replayes = "Нет строки подключения к БД";
@@ -33,23 +33,23 @@ namespace CommandLibrary
                 using (var command = connection.CreateCommand())
                 {
                     var studentList = new List<Student>();
-                    command.CommandText = "select [Id], [UserName], [FIO] from [User]";
+                    command.CommandText = "select [Id], [UserName], [Phone], [Groups] from [Student]";
                     using (var reader = command.ExecuteReader())
                     {
                         while (reader.Read())
                         {
                             studentList.Add(new Student
                             {
-                                Id = reader.GetGuid(0),
-                                FIO = reader.GetString(2),
+                                Id = reader.GetInt64(0),
+                                UserName = reader.GetString(2),
                                 Phone = reader.GetString(3),
-                                Group = reader.GetString(0)
+                              //Groups = reader.
                             });
                         }
                     }
                     foreach (var student in studentList)
                     {
-                        replayes = $"Id: {student.Id}, FIO: {student.FIO}, Phone: {student.Phone}, Группа: {student.Group}";
+                        replayes = $"Id: {student.Id}, FIO: {student.UserName}, Phone: {student.Phone}, Группа: {student.Groups}";
                     }
                     var chatId = message.Chat.Id;
                     var messageId = message.MessageId;
