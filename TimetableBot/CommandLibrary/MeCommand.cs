@@ -33,23 +33,22 @@ namespace CommandLibrary
                 using (var command = connection.CreateCommand())
                 {
                     var studentList = new List<Student>();
-                    command.CommandText = "select [Id], [UserName], [Phone], [Groups] from [Student]";
+                    command.CommandText = "select [Id], [UserName], [Phone] from [Student]";
                     using (var reader = command.ExecuteReader())
                     {
                         while (reader.Read())
                         {
                             studentList.Add(new Student
                             {
-                                Id = reader.GetInt64(0),
-                                UserName = reader.GetString(2),
-                                Phone = reader.GetString(3),
-                              //Groups = reader.
+                                Id = reader.GetInt64(1),
+                                UserName = reader.GetString(1),
+                                Phone = reader.GetString(1),
                             });
                         }
                     }
                     foreach (var student in studentList)
                     {
-                        replayes = $"Id: {student.Id}, FIO: {student.UserName}, Phone: {student.Phone}, Группа: {student.Groups}";
+                        replayes = $"Id: {student.Id}, FIO: {student.UserName}, Phone: {student.Phone}";
                     }
                     var chatId = message.Chat.Id;
                     var messageId = message.MessageId;

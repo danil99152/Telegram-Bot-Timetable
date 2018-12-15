@@ -5,7 +5,6 @@ C:\Users\Danil\Desktop\Telegram-Bot-Timetable\TimetableBot\TimetableBot\bin\Debu
 C:\Users\Danil\Desktop\Telegram-Bot-Timetable\TimetableBot\TimetableBot\bin\Debug\Telegram.Bot.dll
 C:\Users\Danil\Desktop\Telegram-Bot-Timetable\TimetableBot\TimetableBot\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Danil\Desktop\Telegram-Bot-Timetable\TimetableBot\TimetableBot\bin\Debug\Telegram.Bot.xml
-C:\Users\Danil\Desktop\Telegram-Bot-Timetable\TimetableBot\TimetableBot\obj\Debug\TimetableBot.csprojAssemblyReference.cache
 C:\Users\Danil\Desktop\Telegram-Bot-Timetable\TimetableBot\TimetableBot\obj\Debug\TimetableBot.csproj.CoreCompileInputs.cache
 C:\Users\Danil\Desktop\Telegram-Bot-Timetable\TimetableBot\TimetableBot\obj\Debug\TimetableBot.csproj.CopyComplete
 C:\Users\Danil\Desktop\Telegram-Bot-Timetable\TimetableBot\TimetableBot\obj\Debug\TimetableBot.exe
