@@ -33,7 +33,7 @@ namespace CommandLibrary
                 using (var command = connection.CreateCommand())
                 {
                     var studentList = new List<Student>();
-                    command.CommandText = "select [Id], [UserName], [Phone] from [Student]";
+                    command.CommandText = "select [Id], [UserName], [Phone], [Groups] from [Student]";
                     using (var reader = command.ExecuteReader())
                     {
                         while (reader.Read())
@@ -42,7 +42,8 @@ namespace CommandLibrary
                             {
                                 Id = reader.GetInt64(1),
                                 UserName = reader.GetString(1),
-                                Phone = reader.GetString(1),
+                                Phone = reader.GetInt64(1),
+                               // Groups = 
                             });
                         }
                     }

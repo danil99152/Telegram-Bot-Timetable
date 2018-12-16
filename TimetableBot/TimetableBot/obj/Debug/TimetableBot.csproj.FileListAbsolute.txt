@@ -49,3 +49,4 @@ C:\Users\Danil\Desktop\Telegram-Bot-Timetable\TimetableBot\TimetableBot\bin\Debu
 C:\Users\Danil\Desktop\Telegram-Bot-Timetable\TimetableBot\TimetableBot\bin\Debug\Remotion.Linq.EagerFetching.xml
 C:\Users\Danil\Desktop\Telegram-Bot-Timetable\TimetableBot\TimetableBot\bin\Debug\Autofac.dll
 C:\Users\Danil\Desktop\Telegram-Bot-Timetable\TimetableBot\TimetableBot\bin\Debug\Autofac.xml
+C:\Users\Danil\Desktop\Telegram-Bot-Timetable\TimetableBot\TimetableBot\obj\Debug\TimetableBot.csprojAssemblyReference.cache

@@ -13,12 +13,8 @@ namespace TimetableBot
         {
             Id(g => g.Id).GeneratedBy.Identity();
             Map(g => g.GroupName).Length(30);
-            HasManyToMany(g => g.Students)
-                .ParentKeyColumn("Group_id")
-                .ChildKeyColumn("Student_id");
-            HasManyToMany(g => g.Lessons)
-                .ParentKeyColumn("Group_id")
-                .ChildKeyColumn("Lesson_id");
+            HasMany(g => g.Students);
+            HasMany(g => g.Lessons);
         }
     }
 }

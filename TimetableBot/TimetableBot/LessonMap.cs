@@ -15,21 +15,6 @@ namespace TimetableBot
             Map(l => l.LessonName).Length(30);
             Map(l => l.WorkStartDate);
             Map(l => l.WorkEndDate);
-            HasManyToMany(l => l.Teachers)
-                .ParentKeyColumn("Lesson_id")
-                .ChildKeyColumn("Teacher_id");
-            HasManyToMany(l =>l.Classrooms)
-                .ParentKeyColumn("Lesson_id")
-                .ChildKeyColumn("Classroom_id");
-            HasManyToMany(l => l.Kinds)
-                .ParentKeyColumn("Lesson_id")
-                .ChildKeyColumn("Kind_id");
-            HasManyToMany(l => l.Weekdays)
-                 .ParentKeyColumn("Lesson_id")
-                 .ChildKeyColumn("Weekday_id");
-            HasManyToMany(l => l.Groups)
-                .ParentKeyColumn("Lesson_id")
-                .ChildKeyColumn("Group_id");
         }
     }
 }

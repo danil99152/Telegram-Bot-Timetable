@@ -16,9 +16,6 @@ namespace CommandLibrary
             string[] replayes = { "Hello!", "Здравие желаю"};
             var chatId = message.Chat.Id;
             var messageId = message.MessageId;
-
-            //логика бота
-
             await client.SendTextMessageAsync(chatId, replayes[new Random().Next(0, replayes.Length)]);
         }
     }

@@ -101,7 +101,7 @@ values ('{Guid.NewGuid()}', 'petrov', 'Петров Петр Петрович')"
                             {
                                 Id = reader.GetInt64(0),
                                 UserName = reader.GetString(2),
-                                Phone = reader.GetString(3)
+                                Phone = reader.GetInt64(3)
                             });
                         }
                     }
