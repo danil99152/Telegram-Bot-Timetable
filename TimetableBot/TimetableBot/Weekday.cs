@@ -10,6 +10,5 @@ namespace TimetableBot
     {
         public virtual long Id { get; set; }
         public virtual DayOfWeek Day { get; set; }
-        public virtual ICollection<Lesson> Lessons { get; set; }
     }
 }

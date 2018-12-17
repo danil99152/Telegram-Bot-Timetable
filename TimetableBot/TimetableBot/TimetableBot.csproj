@@ -117,8 +117,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\Startup.cs" />
+    <Compile Include="ClassromMap.cs" />
+    <Compile Include="Classroom.cs" />
     <Compile Include="Group.cs" />
     <Compile Include="GroupMap.cs" />
+    <Compile Include="Kind.cs" />
+    <Compile Include="KindMap.cs" />
     <Compile Include="Lesson.cs" />
     <Compile Include="LessonMap.cs" />
     <Compile Include="Models\CommandAttribute.cs" />
@@ -129,6 +133,10 @@
     <Compile Include="RepositoryAttribute.cs" />
     <Compile Include="Student.cs" />
     <Compile Include="StudentMap.cs" />
+    <Compile Include="Teacher.cs" />
+    <Compile Include="TeacherMap.cs" />
+    <Compile Include="Weekday.cs" />
+    <Compile Include="WeekdayMap.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -146,7 +154,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Content Include="App_Data\Timetable.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

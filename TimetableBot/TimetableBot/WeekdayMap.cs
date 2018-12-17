@@ -13,9 +13,6 @@ namespace TimetableBot
         {
             Id(w => w.Id).GeneratedBy.Identity();
             Map(w => w.Day);
-            HasManyToMany(w =>w.Lessons)
-                .ParentKeyColumn("Weekday_id")
-                .ChildKeyColumn("Lesson_id");
         }
     }
 }

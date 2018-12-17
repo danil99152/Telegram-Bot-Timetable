@@ -12,7 +12,7 @@ namespace TimetableBot
     {
         public virtual long   Id       { get; set; }
         public virtual string UserName { get; set; }
-        public virtual long Phone    { get; set; }
+        public virtual long   Phone    { get; set; }
         public virtual long   ChatId   { get; set; }
     }
 }
